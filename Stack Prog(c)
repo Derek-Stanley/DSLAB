@@ -21,13 +21,17 @@ int pop(int a[])
 }
 
 void display(int a[])
-{ printf("The elements are:\n");
-  for(int i=0;i<=TOP;i++)
-  {printf("%d\n",a[i]);}
+{ if(TOP==-1)
+   printf("Stack Empty");
+  else
+  {printf("The elements are:\n");
+   for(int i=0;i<=TOP;i++)
+   {printf("%d\n",a[i]);}
+  }
 }
 
 int main() 
-{ int ch,ele,a[5],n=20;
+{ int ch,ele,a[5],n=5;
   do
   {printf("\n1. PUSH\n2. POP\n3. DISPLAY\n4. EXIT\nEnter your choice:\n");
    scanf("%d",&ch);
@@ -39,7 +43,7 @@ int main()
      case 2 :ele=pop(a);
              printf("\nElement : %d is popped off the stack.",ele); 
              break;
-     case 3 :display(a);
+     case 3 :display(a,5);
              break;
      default:if(ch!=4)
              printf("Enter valid option.");
