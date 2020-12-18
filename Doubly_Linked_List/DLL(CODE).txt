@@ -95,7 +95,7 @@ void display()
 {
 	 struct node *ptr;
 	 ptr=head;
-	 while(temp!=NULL)
+	 while(ptr!=NULL)
 	 {
 		 printf("%d\t",ptr->data);
 		 ptr=ptr->next;
